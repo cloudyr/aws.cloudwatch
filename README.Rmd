@@ -1,0 +1,27 @@
+# AWS CloudWatch Client Package #
+
+**aws.cloudwatch** is a simple client package for the Amazon Web Services [AWS CloudWatch](http://aws.amazon.com/awscloudwatch/) REST API, which can be used to monitor use of AWS web services.
+
+## Installation ##
+
+[![Build Status](https://travis-ci.org/leeper/aws.cloudwatch.png?branch=master)](https://travis-ci.org/leeper/aws.cloudwatch)
+
+To install the latest development version from GitHub, run the following:
+
+```R
+if(!require("devtools")){
+    install.packages("devtools")
+    library("devtools")
+}
+install_github("cloudyr/aws.cloudwatch")
+```
+
+To install the latest version from CRAN, simply use `install.packages("aws.cloudwatch")`.
+```
+
+## Code Examples ##
+
+Coming soon...
+
+---
+[![cloudyr project logo](http://i.imgur.com/JHS98Y7.png)](https://github.com/cloudyr)
