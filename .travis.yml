@@ -3,21 +3,17 @@ sudo: required
 r_packages:
 - knitr
 r_github_packages:
-- cloudyr/aws.signature
 - jimhester/covr
 - eddelbuettel/drat
 after_failure:
-  email: 
+  email:
     recipients:
-     - thosjleeper@gmail.com
+    - thosjleeper@gmail.com
     on_success: change
     on_failure: change
 after_success:
 - Rscript -e 'library("covr");codecov()'
-#- test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash knitreadme.sh
 - test $TRAVIS_PULL_REQUEST == "false" && test $TRAVIS_BRANCH == "master" && bash drat.sh
 env:
   global:
-  - secure: NkoBLN7g9Jjkn1kXfjFbiTmCRXgEFWAeRObLyiJZCA9FzeAN6pARvuV45Jkt8T3pRzma7MbOg1wN/FG7ywAXYYMeijIDUy5VxNZWxbmTOHVOeVBVW+H8qlrGxHF/KXHKKAcjnOnO2Z/rHrvBmXOJQbEXXUwPAlr7RNNxwasrFAY=
-  - secure: XT+piKb0x5Tt4Zac/h7K7IuO3/RtH+KatM7GjNKxUuMjCU8BMKon95e5AG3kCUfnKoEbeuPaV+zx2FwJXP72tVHmEfvVuxnPPH5rPQkEWfAd+THeTnVEqfi+64v4d/oDqY1nbdZ7H8PZNiRnMuWigsLjlmwkitXOpzNL2JPivZk=
-  - secure: g0Gsff+BDSMHFDfLvB+r5vOxgaLWjQBy7eMMJoMdrU+40nXuOaHCHmjL67BYuTjWjfHvnCq01n+rZjIRjJbiSCzlELx0bw7hW0JteAqFrU3UVYwgEnJb7ulBEWuVjL0e/tJItSCwGo1S+ighMXQlM1fCKBTCX5QPV1ROonSla2Y=
+    secure: Um6EVGXORtTyE3rk6+NY79rTXhk5ZVXBbL8R26nJ/oHg0H6jSgrJUzvlHXq0sndTLInc66kkmpfQ05fjkpcrTcKKxaojcZ7dp0MXdHTf9HTMjFq4WSS0xYUKRxSLD5s8zdIUCqxo4Jg+Ehy9sIVdLbPW1nfg/bXMxVLrci+KMwE=
