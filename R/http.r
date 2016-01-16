@@ -17,7 +17,7 @@ cloudwatchHTTP <- function(query, region, key, secret, ...) {
                verb = "GET",
                action = "/",
                query_args = query,
-               canonical_headers = list(host = "monitoring.amazonaws.com"),
+               canonical_headers = list(host = "monitoring.amazonaws.com",
                                         `x-amz-date` = d_timestamp),
                request_body = "",
                key = key, secret = secret)
