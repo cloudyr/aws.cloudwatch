@@ -1,10 +1,8 @@
-cloudwatchHTTP <- function(query, region, key, secret, ...) {
-    if(missing(region))
-        region <- "us-east-1"
-    if(missing(key))
-        key <- Sys.getenv("AWS_ACCESS_KEY_ID")
-    if(missing(secret))
-        secret <- Sys.getenv("AWS_SECRET_ACCESS_KEY")
+cloudwatchHTTP <- function(query, 
+                           region = Sys.getenv("AWS_DEFAULT_REGION","us-east-1"), 
+                           key = Sys.getenv("AWS_ACCESS_KEY_ID"), 
+                           secret = Sys.getenv("AWS_SECRET_ACCESS_KEY"), 
+                           ...) {
     current <- Sys.time()
     d_timestamp <- format(current, "%Y%m%dT%H%M%SZ", tz = "UTC")
     if(key == "") {
