@@ -1,3 +1,8 @@
+#' @import httr
+#' @importFrom jsonlite fromJSON
+#' @importFrom XML xmlParse xmlToList
+#' @importFrom aws.signature signature_v4_auth
+#' @export
 cloudwatchHTTP <- function(query, 
                            region = Sys.getenv("AWS_DEFAULT_REGION","us-east-1"), 
                            key = Sys.getenv("AWS_ACCESS_KEY_ID"), 
@@ -5,7 +10,7 @@ cloudwatchHTTP <- function(query,
                            ...) {
     current <- Sys.time()
     d_timestamp <- format(current, "%Y%m%dT%H%M%SZ", tz = "UTC")
-    if(key == "") {
+    if (key == "") {
         H <- add_headers(`x-amz-date` = d_timestamp)
     } else {
         S <- signature_v4_auth(
@@ -24,10 +29,11 @@ cloudwatchHTTP <- function(query,
                          Authorization = S$SignatureHeader)
     }
     r <- GET(paste0("https://monitoring.amazonaws.com"), H, query = query, ...)
-    if(http_status(r)$category == "client error") {
+    if (http_status(r)$category == "client error") {
         x <- try(xmlToList(xmlParse(content(r, "text"))), silent = TRUE)
-        if(inherits(x, "try-error"))
+        if (inherits(x, "try-error")) {
             x <- try(fromJSON(content(r, "text"))$Error, silent = TRUE)
+        }
         warn_for_status(r)
         h <- headers(r)
         out <- structure(x, headers = h, class = "aws_error")
@@ -36,8 +42,9 @@ cloudwatchHTTP <- function(query,
         attr(out, "request_signature") <- S$SignatureHeader
     } else {
         out <- try(fromJSON(content(r, "text")), silent = TRUE)
-        if(inherits(out, "try-error"))
+        if (inherits(out, "try-error")) {
             out <- structure(content(r, "text"), "unknown")
+        }
     }
     return(out)
 }

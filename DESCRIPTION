@@ -1,12 +1,18 @@
 Package: aws.cloudwatch
 Type: Package
 Title: AWS CloudWatch Client Package
-Version: 0.1.1
-Date: 2016-01-16
+Version: 0.1.2
+Date: 2016-03-16
 Author: Thomas J. Leeper
 Maintainer: Thomas J. Leeper <thosjleeper@gmail.com>
-Description: A simple client package for the Amazon Web Services AWS CloudWatch REST API.
+Description: A simple client package for the Amazon Web Services AWS CloudWatch
+    REST API.
 License: GPL (>= 2)
-Imports: httr, jsonlite, XML, aws.signature
+Imports:
+    httr,
+    jsonlite,
+    XML,
+    aws.signature
 URL: https://github.com/cloudyr/aws.cloudwatch
 BugReports: https://github.com/cloudyr/aws.cloudwatch/issues
+RoxygenNote: 5.0.1.9000
