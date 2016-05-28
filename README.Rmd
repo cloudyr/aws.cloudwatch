@@ -21,7 +21,7 @@ Coming soon...
 
 ## Installation ##
 
-[![CRAN](http://www.r-pkg.org/badges/version/aws.cloudwatch)](http://cran.r-project.org/package=aws.cloudwatch)
+[![CRAN](http://www.r-pkg.org/badges/version/aws.cloudwatch)](https://cran.r-project.org/package=aws.cloudwatch)
 [![Build Status](https://travis-ci.org/cloudyr/aws.cloudwatch.png?branch=master)](https://travis-ci.org/cloudyr/aws.cloudwatch) [![codecov.io](http://codecov.io/github/cloudyr/aws.cloudwatch/coverage.svg?branch=master)](http://codecov.io/github/cloudyr/aws.cloudwatch?branch=master)
 
 This package is not yet on CRAN. To install the latest development version you can install from the cloudyr drat repository:

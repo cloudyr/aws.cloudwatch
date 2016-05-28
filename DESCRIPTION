@@ -1,8 +1,8 @@
 Package: aws.cloudwatch
 Type: Package
 Title: AWS CloudWatch Client Package
-Version: 0.1.3
-Date: 2016-03-19
+Version: 0.1.4
+Date: 2016-05-28
 Author: Thomas J. Leeper
 Maintainer: Thomas J. Leeper <thosjleeper@gmail.com>
 Description: A simple client package for the Amazon Web Services AWS CloudWatch
@@ -17,4 +17,4 @@ Suggests:
     testthat
 URL: https://github.com/cloudyr/aws.cloudwatch
 BugReports: https://github.com/cloudyr/aws.cloudwatch/issues
-RoxygenNote: 5.0.1.9000
+RoxygenNote: 5.0.1

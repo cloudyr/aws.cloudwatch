@@ -12,16 +12,13 @@ cloudwatchHTTP(query, api = c("monitoring", "events", "logs"),
 \arguments{
 \item{query}{A list.}
 
-\item{region}{A character string containing the AWS region.
-If missing, defaults to \dQuote{us-east-1}.}
+\item{api}{A character string specifying which CloudWatch API to call. One of \dQuote{monitoring}, \dQuote{events}, or \dQuote{logs}.}
 
-\item{key}{A character string containing an AWS Access Key ID. 
-If missing, defaults to value stored in environment variable \dQuote{AWS_ACCESS_KEY_ID}.}
+\item{region}{A character string containing the AWS region. If missing, defaults to \dQuote{us-east-1}.}
 
-\item{secret}{A character string containing an AWS Secret Access Key. 
-If missing, defaults to value stored in environment variable \dQuote{AWS_SECRET_ACCESS_KEY}.}
+\item{key}{A character string containing an AWS Access Key ID. If missing, defaults to value stored in environment variable \dQuote{AWS_ACCESS_KEY_ID}.}
 
-\item{body}{The body of the request.}
+\item{secret}{A character string containing an AWS Secret Access Key. If missing, defaults to value stored in environment variable \dQuote{AWS_SECRET_ACCESS_KEY}.}
 
 \item{\dots}{Additional arguments passed to \code{\link[httr]{GET}}.}
 }

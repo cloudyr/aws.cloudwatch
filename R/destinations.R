@@ -1,0 +1,1 @@
+# destinations: http://docs.aws.amazon.com/AmazonCloudWatchLogs/latest/APIReference/API_DescribeDestinations.html

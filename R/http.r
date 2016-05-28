@@ -2,13 +2,10 @@
 #' @description Execute CloudWatch HTTP Requests
 #' @details This is the workhorse function to execute CloudWatch API requests. It should not normally be used directly.
 #' @param query A list.
-#' @param body The body of the request.
-#' @param region A character string containing the AWS region.
-#' If missing, defaults to \dQuote{us-east-1}.
-#' @param key A character string containing an AWS Access Key ID. 
-#' If missing, defaults to value stored in environment variable \dQuote{AWS_ACCESS_KEY_ID}.
-#' @param secret A character string containing an AWS Secret Access Key. 
-#' If missing, defaults to value stored in environment variable \dQuote{AWS_SECRET_ACCESS_KEY}.
+#' @param api A character string specifying which CloudWatch API to call. One of \dQuote{monitoring}, \dQuote{events}, or \dQuote{logs}.
+#' @param region A character string containing the AWS region. If missing, defaults to \dQuote{us-east-1}.
+#' @param key A character string containing an AWS Access Key ID. If missing, defaults to value stored in environment variable \dQuote{AWS_ACCESS_KEY_ID}.
+#' @param secret A character string containing an AWS Secret Access Key. If missing, defaults to value stored in environment variable \dQuote{AWS_SECRET_ACCESS_KEY}.
 #' @param \dots Additional arguments passed to \code{\link[httr]{GET}}.
 #' @import httr
 #' @importFrom jsonlite fromJSON
