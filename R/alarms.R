@@ -11,7 +11,7 @@
 #' @template n
 #' @template token
 #' @template dots
-#' @details These functions delete, modify, and retrieve details about CloudWatch alarms. \code{\link{create_alarms}} creates a new alarm. \code{delete_arms} deletes one or more alarms. \code{get_alarms} can retrieve a specific alarm or list available alarms, and \code{get_alarm_history} retrieve's an alarms history. \code{temp_alarm_state} temporarily changes an alarm's status, which can be useful for testing purposes.
+#' @details These functions delete, modify, and retrieve details about CloudWatch alarms. \code{create_alarms} creates a new alarm. \code{delete_arms} deletes one or more alarms. \code{get_alarms} can retrieve a specific alarm or list available alarms, and \code{get_alarm_history} retrieve's an alarms history. \code{temp_alarm_state} temporarily changes an alarm's status, which can be useful for testing purposes.
 #' @seealso \code{\link{enable_actions}}
 #' @export
 delete_alarms <- function(alarm, ...) {
