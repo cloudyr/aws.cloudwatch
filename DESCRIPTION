@@ -1,18 +1,18 @@
 Package: aws.cloudwatch
 Type: Package
-Title: AWS CloudWatch Client Package
+Title: 'AWS CloudWatch' Client Package
 Version: 0.1.4
-Date: 2016-05-28
+Date: 2018-04-11
 Authors@R: c(person("Thomas J.", "Leeper", role = c("aut", "cre"),
                     email = "thosjleeper@gmail.com"))
-Description: A simple client package for the Amazon Web Services AWS CloudWatch
-    REST API <http://aws.amazon.com/awscloudwatch/>.
+Description: A simple client package for the Amazon Web Services 'AWS CloudWatch
+    API' <http://aws.amazon.com/cloudwatch/>, a service for monitoring other 'AWS' services.
 License: GPL (>= 2)
 Imports:
     httr,
     jsonlite,
     xml2,
-    aws.signature (>= 0.2.6)
+    aws.signature (>= 0.3.4)
 Suggests:
     testthat
 URL: https://github.com/cloudyr/aws.cloudwatch

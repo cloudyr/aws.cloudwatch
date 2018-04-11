@@ -50,9 +50,9 @@ function(query,
 
     r <- GET(paste0("https://", api, ".amazonaws.com"), H, query = query, ...)
     if (http_status(r)$category == "Client error") {
-        x <- try(as_list(read_xml(content(r, "text", encoding = "UTF-8"))), silent = TRUE)
+        x <- try(xml2::as_list(xml2::read_xml(content(r, "text", encoding = "UTF-8"))), silent = TRUE)
         if (inherits(x, "try-error")) {
-            x <- try(fromJSON(content(r, "text", encoding = "UTF-8"))$Error, silent = TRUE)
+            x <- try(jsonlite::fromJSON(content(r, "text", encoding = "UTF-8"))$Error, silent = TRUE)
         }
         warn_for_status(r)
         h <- headers(r)
@@ -61,7 +61,7 @@ function(query,
         attr(out, "request_string_to_sign") <- Sig$StringToSign
         attr(out, "request_signature") <- Sig$SignatureHeader
     } else {
-        out <- try(fromJSON(content(r, "text", encoding = "UTF-8")), silent = TRUE)
+        out <- try(jsonlite::fromJSON(content(r, "text", encoding = "UTF-8")), silent = TRUE)
         if (inherits(out, "try-error")) {
             out <- structure(content(r, "text", encoding = "UTF-8"), "unknown")
         }
