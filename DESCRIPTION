@@ -4,7 +4,8 @@ Title: 'AWS CloudWatch' Client Package
 Version: 0.1.4
 Date: 2018-04-11
 Authors@R: c(person("Thomas J.", "Leeper", role = c("aut", "cre"),
-                    email = "thosjleeper@gmail.com"))
+                    email = "thosjleeper@gmail.com",
+                    comment = c(ORCID = "0000-0003-4097-6326")))
 Description: A simple client package for the Amazon Web Services 'AWS CloudWatch
     API' <http://aws.amazon.com/cloudwatch/>, a service for monitoring other 'AWS' services.
 License: GPL (>= 2)
