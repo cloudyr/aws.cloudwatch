@@ -6,4 +6,4 @@ knitreadme.sh
 ^\.Rproj\.user$
 CONTRIBUTING.md
 /man-roxygen
-^.github/
+^\.github.?
