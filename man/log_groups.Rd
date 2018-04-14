@@ -15,15 +15,14 @@ get_log_groups(prefix, n, token, ...)
 \arguments{
 \item{name}{A character string specifying a log group name.}
 
+\item{\dots}{Additional arguments passed to \code{\link{cloudwatchHTTP}}.}
+
 \item{prefix}{Optionally, a log stream \emph{prefix} used to restrict the returned results.}
 
 \item{n}{The maximum number of records to return.}
 
 \item{token}{A pagination token.}
-
-\item{\dots}{Additional arguments passed to \code{\link{cloudwatchHTTP}}.}
 }
 \description{
 Create, retrieve, and delete log groups
 }
-

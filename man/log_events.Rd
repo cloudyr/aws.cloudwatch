@@ -18,6 +18,8 @@ get_log_events(name, stream, start, end, ascending, n, token, ...)
 
 \item{token}{A pagination token.}
 
+\item{\dots}{Additional arguments passed to \code{\link{cloudwatchHTTP}}.}
+
 \item{start}{Unix epoch time in milliseconds.}
 
 \item{end}{Unix epoch time in milliseconds.}
@@ -25,8 +27,6 @@ get_log_events(name, stream, start, end, ascending, n, token, ...)
 \item{ascending}{A logical specifying whether earliest events should be returned first. Default is implicitly \code{FALSE}.}
 
 \item{n}{The maximum number of records to return.}
-
-\item{\dots}{Additional arguments passed to \code{\link{cloudwatchHTTP}}.}
 }
 \description{
 Get and create log events
@@ -34,4 +34,3 @@ Get and create log events
 \details{
 \code{get_log_events} retrieves event data. \code{create_log_events} adds event data to the log.
 }
-

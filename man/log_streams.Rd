@@ -17,6 +17,8 @@ get_log_streams(name, prefix, ascending, sort, n, token, ...)
 
 \item{stream}{A character string specifying a log stream name.}
 
+\item{\dots}{Additional arguments passed to \code{\link{cloudwatchHTTP}}.}
+
 \item{prefix}{Optionally, a log stream \emph{prefix} used to restrict the returned results.}
 
 \item{ascending}{A logical specifying whether earliest events should be returned first. Default is implicitly \code{TRUE}.}
@@ -26,10 +28,7 @@ get_log_streams(name, prefix, ascending, sort, n, token, ...)
 \item{n}{The maximum number of records to return.}
 
 \item{token}{A pagination token.}
-
-\item{\dots}{Additional arguments passed to \code{\link{cloudwatchHTTP}}.}
 }
 \description{
 Get, create, and delete log streams
 }
-

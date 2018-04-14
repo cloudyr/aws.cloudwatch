@@ -5,20 +5,26 @@
 \title{cloudwatchHTTP}
 \usage{
 cloudwatchHTTP(query, api = c("monitoring", "events", "logs"),
-  region = Sys.getenv("AWS_DEFAULT_REGION", "us-east-1"),
-  key = Sys.getenv("AWS_ACCESS_KEY_ID"),
-  secret = Sys.getenv("AWS_SECRET_ACCESS_KEY"), ...)
+  headers = list(), verbose = getOption("verbose", FALSE),
+  region = Sys.getenv("AWS_DEFAULT_REGION", "us-east-1"), key = NULL,
+  secret = NULL, session_token = NULL, ...)
 }
 \arguments{
 \item{query}{A list.}
 
 \item{api}{A character string specifying which CloudWatch API to call. One of \dQuote{monitoring}, \dQuote{events}, or \dQuote{logs}.}
 
+\item{headers}{A list of headers to pass to the HTTP request.}
+
+\item{verbose}{A logical indicating whether to be verbose. Default is given by \code{options("verbose")}.}
+
 \item{region}{A character string containing the AWS region. If missing, defaults to \dQuote{us-east-1}.}
 
-\item{key}{A character string containing an AWS Access Key ID. If missing, defaults to value stored in environment variable \dQuote{AWS_ACCESS_KEY_ID}.}
+\item{key}{A character string containing an AWS Access Key ID. See \code{\link[aws.signature]{locate_credentials}}.}
 
-\item{secret}{A character string containing an AWS Secret Access Key. If missing, defaults to value stored in environment variable \dQuote{AWS_SECRET_ACCESS_KEY}.}
+\item{secret}{A character string containing an AWS Secret Access Key. See \code{\link[aws.signature]{locate_credentials}}.}
+
+\item{session_token}{A character string containing an AWS Session Token. See \code{\link[aws.signature]{locate_credentials}}.}
 
 \item{\dots}{Additional arguments passed to \code{\link[httr]{GET}}.}
 }
@@ -28,4 +34,3 @@ Execute CloudWatch HTTP Requests
 \details{
 This is the workhorse function to execute CloudWatch API requests. It should not normally be used directly.
 }
-

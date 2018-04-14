@@ -19,4 +19,3 @@ delete_retention(name, ...)
 \description{
 Create and delete retention policies
 }
-

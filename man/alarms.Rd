@@ -2,8 +2,8 @@
 % Please edit documentation in R/alarms.R
 \name{delete_alarms}
 \alias{delete_alarms}
-\alias{get_alarm_history}
 \alias{get_alarms}
+\alias{get_alarm_history}
 \alias{temp_alarm_state}
 \title{CloudWatch Alarms}
 \usage{
@@ -17,6 +17,8 @@ temp_alarm_state(alarm, reason, state, ...)
 }
 \arguments{
 \item{alarm}{A character vector specifying one or more CloudWatch alarm names.}
+
+\item{\dots}{Additional arguments passed to \code{\link{cloudwatchHTTP}}.}
 
 \item{prefix}{Rather than specify \code{alarm}, it is possible to specify the \emph{prefix} of a set of alarm names using this parameter.}
 
@@ -33,8 +35,6 @@ temp_alarm_state(alarm, reason, state, ...)
 \item{end}{Optionally, the end date of alarm history to retrieve.}
 
 \item{reason}{A charater string specifying the alarm is being temporarily set to this state.}
-
-\item{\dots}{Additional arguments passed to \code{\link{cloudwatchHTTP}}.}
 }
 \description{
 Get CloudWatch alarms and alarm information; delete alarms
@@ -45,4 +45,3 @@ These functions delete, modify, and retrieve details about CloudWatch alarms. \c
 \seealso{
 \code{\link{enable_actions}}
 }
-

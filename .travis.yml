@@ -6,6 +6,7 @@ matrix:
   - os: linux
     dist: trusty
     sudo: required
+    env: R_CODECOV=true
     env: DRAT_DEPLOY=true
   - os: osx
     osx_image: xcode9.2

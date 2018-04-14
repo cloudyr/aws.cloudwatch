@@ -20,6 +20,8 @@ test_metric_filter(pattern, messages, ...)
 
 \item{filter}{The name of a metric filter.}
 
+\item{\dots}{Additional arguments passed to \code{\link{cloudwatchHTTP}}.}
+
 \item{prefix}{A filter name \emph{prefix} used to restrict the returned results.}
 
 \item{n}{The maximum number of records to return.}
@@ -29,10 +31,7 @@ test_metric_filter(pattern, messages, ...)
 \item{pattern}{According to the API documentation: \dQuote{A symbolic description of how CloudWatch Logs should interpret the data in each log event. For example, a log event may contain timestamps, IP addresses, strings, and so on. You use the filter pattern to specify what to look for in the log event message.}}
 
 \item{messages}{A character vector of event messages.}
-
-\item{\dots}{Additional arguments passed to \code{\link{cloudwatchHTTP}}.}
 }
 \description{
 Get, create, delete, and test metric filters
 }
-
